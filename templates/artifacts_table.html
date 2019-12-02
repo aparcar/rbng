@@ -1,0 +1,24 @@
+<h2>{{ artifacts | length }}  artifacts in suite {{ suite }}</h2>
+<table>
+	<tr>
+		<th>artifact</th>
+		<th>version</th>
+		<th>test result</th>
+		<th>test date<br />test duration</th>
+		<th>1st build log<br />2nd build log</th>
+	</tr>
+	{% for artifact in artifacts %}
+	<tr>
+		<td>{{ artifact.name }}</td>
+		<td>{{ artifact.version}}</td>
+		<td>
+			<img src="/static/{{ artifact.status }}.png" alt="{{ artifact.status }} icon" />
+			{{ artifact.status}}
+		</td>
+		<td>{{ artifact.date}} <br />{{ artifact.build_duration }}</td>
+		<td>
+			logs
+		</td>
+	</tr>
+	{% endfor %}
+</table>

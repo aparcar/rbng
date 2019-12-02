@@ -1,0 +1,37 @@
+<h2>Overview of various statistics about reproducible builds</h2>
+<ul>
+   Please also visit the more general website <li><a href="https://reproducible-builds.org">Reproducible-builds.org</a></li> where <em>reproducible builds</em> are explained in more detail than just <em>bit by bit identical rebuilds to enable verifcation of the sources used to build</em>.
+   We think that reproducible builds should become the norm, so we wrote <li><a href="https://reproducible-builds.org/howto">How to make your software reproducible</a></li>.
+   Also aimed at the free software world at large, is the first specification we have written: the <li><a href="https://reproducible-builds.org/specs/source-date-epoch/">SOURCE_DATE_EPOCH specification</a></li>.
+</ul>
+<ul>
+   These pages are showing the <em>potential</em> of <li><a href="https://wiki.debian.org/ReproducibleBuilds" target="_blank">reproducible builds of Debian packages</a></li>.
+   The results shown were obtained by <a href="https://jenkins.debian.net/view/reproducible">several jobs</a> running on
+   <a href="https://jenkins.debian.net/userContent/about.html#_reproducible_builds_jobs">jenkins.debian.net</a>.
+   Thanks to <a href="https://www.profitbricks.co.uk">Profitbricks</a> for donating the virtual machines this is running on!
+</ul>
+<form action="https://tests.reproducible-builds.org/redirect" method="GET">https://tests.reproducible-builds.org/
+<input type="text" name="SrcPkg" placeholder="Type my friend.." value="chewing-editor" />
+<input type="submit" value="submit source package name" />
+</form>
+<ul>
+   We are reachable via IRC (<code>#debian-reproducible</code> and <code>#reproducible-builds</code> on OFTC),
+   or <a href=mailto:reproducible-builds@lists.alioth.debian.org>email</a>,
+   and we care about free software in general,
+   so whether you are an upstream developer or working on another distribution, or have any other feedback - we'd love to hear from you!
+   Besides Debian we are also testing 
+   <li><a href="/coreboot/">coreboot</a></li>,
+   <li><a href="/openwrt/">OpenWrt</a></li>, 
+   <li><a href="/netbsd/">NetBSD</a></li>, 
+   <li><a href="/freebsd/">FreeBSD</a></li>, 
+   and <li><a href="/archlinux/">Arch Linux</a></li> 
+   though not as thoroughly as Debian yet. 
+   <li><a href="http://rb.zq1.de/">openSUSE</a></li>, 
+   <li><a href="https://r13y.com/">NixOS</a></li> and 
+   <li><a href="https://verification.f-droid.org/">F-Droid</a></li> are also being tested, though elsewhere.
+   As far as we know, the <a href="https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-challenge.html">Guix challenge</a> is not yet run systematically anywhere.
+   Testing of 
+   <a href="/rpms/fedora-23.html">Fedora</a> 
+   has sadly been suspended for now. 
+ We can test more projects, if <em>you</em> contribute!
+</ul>

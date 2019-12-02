@@ -1,0 +1,94 @@
+<p style="clear:both;">
+	<table class="main" id="variation">
+		<tr>
+			<th>variation</th>
+			<th width="40%">first build</th>
+			<th width="40%">second build</th>
+		</tr>
+		<tr>
+			<td>hostname</td>
+			<td> osuosl-build169-amd64 or osuosl-build170-amd64</td>
+			<td>the other one</td>
+		</tr>
+		<tr>
+			<td>domainname</td>
+			<td colspan="2"> is not yet varied between rebuilds of Arch Linux.</td>
+		</tr>
+		<tr>
+			<td>env TZ</td>
+			<td>TZ="/usr/share/zoneinfo/Etc/GMT+12"</td>
+			<td>TZ="/usr/share/zoneinfo/Etc/GMT-14"</td>
+		</tr>
+		<tr>
+			<td>env LANG</td>
+			<td><em>LANG="en_US.UTF-8"</em></td>
+			<td>LANG="fr_CH.UTF-8"</td>
+		</tr>
+		<tr>
+			<td>env LC_ALL</td>
+			<td><em>LANG="en_US.UTF-8"</em></td>
+			<td>LC_ALL="fr_CH.UTF-8"</td>
+		</tr>
+		<tr>
+			<td>the build path</td>
+			<td colspan="2">is not yet varied between rebuilds of Arch Linux</td>
+		</tr>
+		<tr>
+			<td>env PATH</td>
+			<td colspan="2">is set to '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin' because that's what <i>makechrootpkg</i> is using</td>
+		<tr>
+			<td>env USER</td>
+			<td>jenkins</td>
+			<td>build 2</td>
+		</tr>
+		<tr>
+			<td>user/uid</td>
+			<td>jenkins/103</td>
+			<td>build2/1235</td>
+		</tr>
+		<tr>
+			<td>group/gid</td>
+			<td>jenkins/105</td>
+			<td>build2/1235</td>
+		</tr>
+		<tr>
+			<td>kernel version</td>
+			<br />&nbsp;&nbsp; Linux 5.2.0-0.bpo.3-amd64 #1 SMP Debian 5.2.17-1~bpo10+1 (2019-09-30) x86_64
+			<td colspan="2"> is currently not varied between rebuilds of Arch Linux.</td>
+		</tr>
+		<tr>
+			<td>umask</td>
+			<td>0022
+			<td>0002</td>
+		</tr>
+		<tr>
+			<td>CPU type</td>
+			<td> AMD Opteron 62xx class CPU</td>
+			<td>same for both builds</td>
+		</tr>
+		<tr>
+			<td>/bin/sh</td>
+			<td>/bin/dash</td>
+			<td>/bin/bash</td>
+		</tr>
+		<tr>
+			<td>year, month, date</td>
+			<td>osuosl-build169-amd64: today (2019-12-01) or osuosl-build170-amd64: 398 days in the future (2021-01-02)</td>
+			<td>the other one</td>
+		</tr>
+		<tr>
+			<td>hour, minute</td>
+			<td>hour and minute will probably vary between two builds...</td>
+			<td>the future system actually runs 398 days, 6 hours and 23 minutes ahead...</td>
+		</tr>
+		<tr>
+			<td>Filesystem</td>
+			<td>tmpfs</td>
+			<td>same for both builds (currently, this could be varied using <a href="https://tracker.debian.org/disorderfs">disorderfs</a>)</td>
+		</tr>
+		<tr>
+			<td><em>everything else...</em></td>
+			<td colspan="2">is likely the same. There will be more variations in the wild.</td>
+		</tr>
+	</table>
+</p>

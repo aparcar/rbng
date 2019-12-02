@@ -1,0 +1,48 @@
+<table class="main">
+	<tr>
+		<th class="left">suite</th>
+		<th class="center">arch</th>
+		<th class="center">all</th>
+		<th class="center">
+			<a href="/debian///index_reproducible.html" target="_parent"><img src="/static/weather-clear.png" alt="reproducible icon" /></a>
+			reproducible</th>
+		<th class="center">
+			<a href="/debian///index_FTBR.html" target="_parent"><img src="/static/weather-showers-scattered.png" alt="FTBR icon" /></a>
+			unreproducible</th>
+		<th class="center">
+			<a href="/debian///index_FTBFS.html" target="_parent"><img src="/static/weather-storm.png" alt="FTBFS icon" /></a>
+			failing to build</th>
+		<th class="center">
+			<a href="/debian///index_timeout.html" target="_parent"><img src="/static/Current_event_clock.png" alt="timeout icon" /></a>
+			timing out</th>
+		<th class="center">
+			<a href="/debian///index_depwait.html" target="_parent"><img src="/static/weather-snow.png" alt="depwait icon" /></a>
+			in depwait state</th>
+		<th class="center">
+			<a href="/debian///index_blacklisted.html" target="_parent"><img src="/static/error.png" alt="blacklisted icon" /></a>
+			download problem</th>
+		<th class="center">
+			<a href="/debian///index_blacklisted.html" target="_parent"><img src="/static/error.png" alt="blacklisted icon" /></a>
+			blacklisted</th>
+		<th class="center">
+			<a href="/debian///index_NFU.html" target="_parent"><img src="/static/weather-few-clouds-night.png" alt="NFU icon" /></a>
+			not for this architecture</th>
+	</tr>
+	{% for suite_name, suite in suites.items() %}
+	{% for arch_name, arch in suite.items() %}
+	<tr>
+		<td>{{ suite_name }}</a></td>
+		<td>{{ arch_name }}</a></td>
+		<td>{{ arch.total }}</a></td>
+		<td><a href='/{{ distro }}/{{ suite_name }}/{{ arch_name }}/reproducible.html'>{{ arch.reproducible| default(0)}} / {{ (arch.reproducible / arch.total * 100) | round(2) }}%</a></td>
+		<td><a href='/{{ distro }}/{{ suite_name }}/{{ arch_name }}/ftbr.html'>{{ arch.FTBR| default(0)}} / {{ (arch.FTBR | default(0) / arch.total * 100) | round(2) }}%</a></td>
+		<td><a href='/{{ distro }}/{{ suite_name }}/{{ arch_name }}/ftbfs.html'>{{ arch.FTBFS| default(0)}} / {{ (arch.FTBFS | default(0) / arch.total * 100) | round(2) }}%</a></td>
+		<td><a href='/{{ distro }}/{{ suite_name }}/{{ arch_name }}/timeout.html'>{{ arch.timeout| default(0)}} / {{ (arch.timeout | default(0) / arch.total * 100) | round(2) }}%</a></td>
+		<td><a href='/{{ distro }}/{{ suite_name }}/{{ arch_name }}/depwait.html'>{{ arch.depwait| default(0)}} / {{ (arch.depwait | default(0) / arch.total * 100) | round(2) }}%</a></td>
+		<td><a href='/{{ distro }}/{{ suite_name }}/{{ arch_name }}/e404.html'>{{ arch.E404| default(0)}} / {{ (arch.E404 | default(0) / arch.total * 100) | round(2) }}%</a></td>
+		<td><a href='/{{ distro }}/{{ suite_name }}/{{ arch_name }}/blacklisted.html'>{{ arch.blacklisted| default(0)}} / {{ (arch.blacklisted | default(0) / arch.total * 100) | round(2) }}%</a></td>
+		<td><a href='/{{ distro }}/{{ suite_name }}/{{ arch_name }}/nfu.html'>{{ arch.NFU| default(0)}} / {{ (arch.NFU | default(0) / arch.total * 100) | round(2) }}%</a></td>
+	</tr>
+	{% endfor %}
+	{% endfor %}
+</table>

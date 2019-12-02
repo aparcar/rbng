@@ -1,0 +1,20 @@
+<p><em>Reproducible builds</em> enable anyone to reproduce bit by bit identical binary packages from a given source, so that anyone can verify that a given binary derived from the source it was said to be derived.
+	There is more information about <a href="https://wiki.debian.org/ReproducibleBuilds">reproducible builds on the Debian wiki</a> and on <a href="https://reproducible-builds.org">https://reproducible-builds.org</a>.
+	These pages explain in more depth why this is useful, what common issues exist and which workarounds and solutions are known.
+</p>
+<p><em>Reproducible Arch Linux</em> is an effort to apply this to Arch Linux. Thus Arch Linux packages are build twice, with a few variations added and then the resulting packages from the two builds are compared using <a href="https://tracker.debian.org/diffoscope">diffoscope</a>.
+	Please note that this is still at an early stage. Also there are more variations expected to be seen in the wild.
+	Missing bits for <em>testing</em> Arch Linux:<ul>
+		<li>cross references to <a href="https://tests.reproducible-builds.org/debian/index_issues.html">Debian notes</a> - and having Arch Linux specific notes.</li>
+	</ul>
+</p>
+<p>Missing bits for Arch Linux:<ul>
+		<li>code needs to be written to compare the packages built twice here against newly built packages from the Official Arch Linux repositories.</li>
+		<li>user tools, for users to verify all of this easily.</li>
+	</ul>
+</p>
+<p>If you want to help out or discuss reproducible builds in Arch Linux, please join #archlinux-reproducible on freenode.</p>
+<p>(
+	<a href='/archlinux/recent_builds.html'>recent builds</a>,
+	<a href='/archlinux/scheduled.html'>currently scheduled</a>
+	)</p>

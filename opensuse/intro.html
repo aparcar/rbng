@@ -1,0 +1,19 @@
+       <p>
+       	<center><img src="coreboot.png" width="300" class="alignnone size-medium wp-image-6" alt="coreboot" height="231" /><br />
+       		<blockquote>
+       			<br />
+       			<strong>coreboot&trade;</strong>: fast, flexible <em>and reproducible</em> Open Source firmware!
+       		</blockquote>
+       	</center>
+       </p>
+       <h1>Reproducible Coreboot</h1>
+       <p><em>Reproducible builds</em> enable anyone to reproduce bit by bit identical binary packages from a given source, so that anyone can verify that a given binary derived from the source it was said to be derived.
+       	There is more information about <a href="https://wiki.debian.org/ReproducibleBuilds">reproducible builds on the Debian wiki</a> and on <a href="https://reproducible-builds.org">https://reproducible-builds.org</a>.
+       	These pages explain in more depth why this is useful, what common issues exist and which workarounds and solutions are known.
+       </p>
+       <p><em>Reproducible Coreboot</em> is an effort to apply this to coreboot. Thus each coreboot.rom is build twice (without payloads), with a few variations added and then those two ROMs are compared using <a href="https://tracker.debian.org/diffoscope">diffoscope</a>. Please note that the toolchain is not varied at all as the rebuild happens on exactly the same system. More variations are expected to be seen in the wild.</p>
+       <p>There is a weekly run <a href="https://jenkins.debian.net/view/reproducible/job/reproducible_coreboot/">jenkins job</a> to test the <code>master</code> branch of <a href="https://review.coreboot.org/p/coreboot.git">coreboot.git</a>. The jenkins job is running <a href="https://salsa.debian.org/qa/jenkins.debian.net/tree/master/bin/reproducible_coreboot.sh">reproducible_coreboot.sh</a> in a Debian environment and this script is solely responsible for creating this page. Feel invited to join <code>#reproducible-builds</code> (on irc.oftc.net) to request job runs whenever sensible. Patches and other <a href="mailto:reproducible-builds@lists.alioth.debian.org">feedback</a> are very much appreciated - if you want to help, please start by looking at the <a href="https://jenkins.debian.net/userContent/todo.html#_reproducible_coreboot">ToDo list for coreboot</a>, you might find something easy to contribute.
+       	<br />Thanks to <a href="https://www.profitbricks.co.uk">Profitbricks</a> for donating the virtual machines this is running on!</p>
+       <p>261 (100.0%) out of 261 built coreboot images were reproducible in our test setup
+       	!
+       	These tests were last run on 2019-12-02 for version 4.11-228-gae64f22e8d using diffoscope 133.</p>
